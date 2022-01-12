@@ -1,0 +1,34 @@
+﻿@using System.Activities.Statements
+@using WebApp.Models
+@model WebApp.Models.ProductsViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+<h1>Web App</h1>
+<p>There are @Model.Products.Count products.</p>
+
+<table border="1">
+    <body>
+    <tr>
+        <td>EmpName</td>
+        <td>EmpSurname</td>
+        <td>EmpAddress</td>
+    <td>
+        EmpPhone<br />
+    </td>
+
+    @{
+    foreach (var product in Model.Products)
+    {
+    <tr>
+        <td> @product.EmpName </td>
+        <td> @product.EmpSurname </td>
+        <td> @product.EmpAddress </td>
+        <td> @product.EmpPhone </td>
+    </tr>
+
+            }
+            }
+        </tr>
+    </body>
+</table>
